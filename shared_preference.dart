@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 String title = 'SharedPreferences';
+
+
+
 Future<SharedPreferences> prefs = SharedPreferences.getInstance();
 // ignore: non_constant_identifier_names
 final TextEditingController PhoneNumberController = TextEditingController();
@@ -25,6 +28,11 @@ class sharedpreferences extends StatefulWidget {
 // ignore: camel_case_types
 class _sharedpreferencesState extends State<sharedpreferences> {
   // ignore: non_constant_identifier_names
+      
+      
+      
+      //getting value from the setter //scroll down to see setter
+      
   Future get_phoneNumber() async {
     final SharedPreferences sharedPreferences =
         await SharedPreferences.getInstance();
@@ -39,6 +47,9 @@ class _sharedpreferencesState extends State<sharedpreferences> {
       print(finalPhoneNumber);
     });
   }
+      
+      
+      
 
   @override
   void initState() {
@@ -73,6 +84,10 @@ class _sharedpreferencesState extends State<sharedpreferences> {
                 colour: Colors.blueGrey,
                 onPress: () {
                   // ignore: non_constant_identifier_names, missing_return
+                      
+                      
+                      //here we get the value to add setter
+                      
                   Future<int> Set_PhoneNumber() async {
                     final SharedPreferences sharedPreferences =
                         await SharedPreferences.getInstance();
@@ -87,6 +102,9 @@ class _sharedpreferencesState extends State<sharedpreferences> {
                     Set_PhoneNumber();
                   });
                 },
+                    
+                    
+                    
                 text: 'Submit',
               ),
             ),
